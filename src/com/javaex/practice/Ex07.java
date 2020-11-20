@@ -7,7 +7,7 @@ public class Ex07 {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		sc.close();
+		int count=0;
 		System.out.print("금액: ");
 		int money = sc.nextInt();
 		int[] wonArray = new int[10];
@@ -23,9 +23,15 @@ public class Ex07 {
 		wonArray[9] = 1;
 		
 		for(int i=0; i<wonArray.length; i++) {
-				
-			}
+			count = money / wonArray[i];
+			System.out.println(wonArray[i]+"원 :" + count + "개");
+			money = money - (wonArray[i]*count);
+		}
+		
+		
+		sc.close();
 	}
+	
 		
 
 }
